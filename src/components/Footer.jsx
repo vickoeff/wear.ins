@@ -6,6 +6,7 @@ import {
   Img,
   Text,
   IconButton,
+  Button,
   useStyleConfig,
   useColorMode,
   useBreakpointValue,
@@ -47,7 +48,7 @@ export default function Footer() {
         bg={colorMode === 'dark' ? '#111' : '#fff'}
         zIndex="2"
         pt="1rem"
-        pb="4rem"
+        pb="2rem"
       >
         <Container maxW="container.xl" pt="2rem">
           <Img
@@ -66,7 +67,7 @@ export default function Footer() {
             Wear.Ins
           </Heading>
           <Stack direction={direction}>
-            <Box flex={1} mt={2}>
+            <Box flex={2} mt={2}>
               <Text fontSize="md" textTransform="capitalize">
                 Pahlawan street Gg. Kidam no. 162,
                 <br />
@@ -98,6 +99,25 @@ export default function Footer() {
                 @wear.ins
               </Text>
             </Box>
+            <Box flex={1} mt={2} textAlign={{ base: 'start', md: 'end' }}>
+              <Text fontSize="md" mt={1} textTransform="lowercase">
+                <Button
+                  height="fit-content"
+                  p={{ base: '0.5rem ', md: '1rem 2rem' }}
+                  mr={4}
+                  _focus={{ outline: 'none' }}
+                >
+                  <Img
+                    src={process.env.PUBLIC_URL + '/shopee-logo.png'}
+                    width={{ base: '24px', md: '64px' }}
+                  />
+                </Button>
+                {direction === 'column' ? '@wear.ins' : ''}
+              </Text>
+            </Box>
+          </Stack>
+          <Stack direction="row" mt={5}>
+            <Text fontSize="sm">© Copyright ⋅ Some right reserved</Text>
           </Stack>
         </Container>
       </Box>
