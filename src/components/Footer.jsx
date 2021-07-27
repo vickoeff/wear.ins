@@ -51,11 +51,15 @@ export default function Footer() {
       >
         <Container maxW="container.xl" pt="2rem">
           <Img
-            src={process.env.PUBLIC_URL + '/logo-transparent.png'}
+            src={
+              colorMode === 'dark'
+                ? process.env.PUBLIC_URL + '/logo-transparent-border.png'
+                : process.env.PUBLIC_URL + '/logo-dark.png'
+            }
             position="absolute"
-            top="-64%"
+            top={{ base: '-38vw', sm: '-45%', md: '-64%' }}
             maxW={{ base: '50%', sm: '50%', md: '100%' }}
-            w="160px"
+            w={{ base: '80px', sm: '160px', md: '160px' }}
             mr="auto"
           />
           <Heading fontSize="6xl" textTransform="none">

@@ -67,7 +67,7 @@ const Footer = {
   baseStyle: {
     position: 'relative',
     pt: '30%',
-    bgImg: process.env.PUBLIC_URL + '/girl-mask.png',
+    bgImg: process.env.PUBLIC_URL + '/girl-mask.jpg',
     bgPosition: 'top',
     bgRepetation: 'none',
     bgSize: '100%',
@@ -115,16 +115,21 @@ const theme = extendTheme({
     },
     Button: {
       variants: {
-        'navbar-button': ({ colorMode }) => ({
+        'navbar-button': {
+          width: '300px',
+          height: '48px',
           paddingInlineStart: '2rem',
           paddingInlineEnd: '2rem',
           ml: { base: '4px', sm: '0.5rem', md: '0' },
           mr: { base: '4px', sm: '0.5rem', md: '2rem' },
           borderTopRightRadius: '0',
           borderTopLeftRadius: '0',
-          color: '#fff',
-          bg: colorMode === 'dark' ? '#3e3e3e' : '#111',
-        }),
+          fontSize: '24px',
+          color: '#000',
+          bg: '#ffffff66',
+          backdropFilter: 'blur(6px)',
+          boxShadow: '0px 4px 6px 0px #9090903d',
+        },
       },
     },
     // sections styles

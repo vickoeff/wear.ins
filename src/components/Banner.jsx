@@ -18,7 +18,7 @@ export default function Banner() {
           maxH={{ base: '40vw', sm: '40vw', md: '100%' }}
           textAlign={{ base: 'center', sm: 'center', md: 'start' }}
         >
-          <Heading fontSize="6xl" textTransform="none">
+          <Heading fontSize="6xl" ml="-3px" textTransform="none">
             Wear.Ins
           </Heading>
           <Text>Wearing clothes with awesome inspiration</Text>

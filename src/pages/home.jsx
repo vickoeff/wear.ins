@@ -4,36 +4,42 @@ import Banner from '../components/Banner';
 import Products from '../components/Products';
 import Footer from '../components/Footer';
 
+import { useColorMode } from '@chakra-ui/react';
+
 function Home() {
-  const navbar = [
-    {
-      label: 'Products',
-    },
-    {
-      label: 'Contact',
-    },
-  ];
+  const { colorMode } = useColorMode();
 
   const products = [
     {
-      tShirt: process.env.PUBLIC_URL + '/images/ninjas.png',
+      tShirt:
+        colorMode === 'dark'
+          ? process.env.PUBLIC_URL + '/images/black-ninja-FB.png'
+          : process.env.PUBLIC_URL + '/images/white-ninja-FB.png',
       price: 'Rp 100.000,-',
       discountedPrice: 'Rp 90.000,-',
       isDiscount: true,
     },
     {
-      tShirt: process.env.PUBLIC_URL + '/images/masker-girl.png',
+      tShirt:
+        colorMode === 'dark'
+          ? process.env.PUBLIC_URL + '/images/black-masker-girl-FB.png'
+          : process.env.PUBLIC_URL + '/images/white-masker-girl-FB.png',
       price: 'Rp 100.000,-',
+      discountedPrice: 'Rp 80.000,-',
+      isDiscount: true,
     },
     {
-      tShirt: process.env.PUBLIC_URL + '/images/cat-girl.png',
+      tShirt:
+        colorMode === 'dark'
+          ? process.env.PUBLIC_URL + '/images/black-ninja-girl-FB.png'
+          : process.env.PUBLIC_URL + '/images/white-ninja-girl-FB.png',
       price: 'Rp 100.000,-',
     },
   ];
 
   return (
     <>
-      <Navbar navbar={navbar} />
+      <Navbar />
       <Banner />
       <Products products={products} />
       <Footer />

@@ -9,9 +9,9 @@ import {
   useStyleConfig,
 } from '@chakra-ui/react';
 import { Line } from './atoms';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import { BiSun, BiMoon } from 'react-icons/bi';
 
-export default function Navbar({ navbar }) {
+export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   const styles = useStyleConfig('Navbar');
@@ -22,22 +22,22 @@ export default function Navbar({ navbar }) {
         <Container maxW="container.xl">
           <Flex justifyContent={{ base: 'center', md: 'start' }}>
             <Button variant="navbar-button" onClick={toggleColorMode}>
-              {colorMode === 'dark' ? <FaSun /> : <FaMoon />}
+              {colorMode === 'dark' ? <BiSun /> : <BiMoon />}
             </Button>
-            {navbar.map((item, index) => {
+            {/* {navbar.map((item, index) => {
               return (
                 <Button variant="navbar-button" key={index}>
                   {item.label}
                 </Button>
               );
-            })}
+            })} */}
           </Flex>
         </Container>
       </Box>
 
       {/* ---- Side section indicator section ---- */}
       <Box
-        display="flex"
+        display={{ base: 'none', sm: 'flex' }}
         flexDirection="column"
         position="fixed"
         alignItems="center"
@@ -54,7 +54,7 @@ export default function Navbar({ navbar }) {
           transform="rotate(90deg)"
           color={colorMode === 'dark' ? '#2DEA4B' : 'orange'}
         >
-          Home
+          Wear.Ins
         </Text>
         <Line mt="2rem" />
       </Box>
