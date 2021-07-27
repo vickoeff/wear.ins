@@ -21,7 +21,11 @@ export default function Navbar() {
       <Box __css={styles}>
         <Container maxW="container.xl">
           <Flex justifyContent={{ base: 'center', md: 'start' }}>
-            <Button variant="navbar-button" onClick={toggleColorMode}>
+            <Button
+              variant="navbar-button"
+              _focus={{ outline: 'none' }}
+              onClick={toggleColorMode}
+            >
               {colorMode === 'dark' ? <BiSun /> : <BiMoon />}
             </Button>
             {/* {navbar.map((item, index) => {
