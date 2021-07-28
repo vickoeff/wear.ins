@@ -113,7 +113,7 @@ export default function Footer() {
                     width={{ base: '24px', md: '64px' }}
                   />
                 </Button>
-                {direction === 'column' ? '@wear.ins' : ''}
+                {direction === 'column' ? 'wearins17' : ''}
               </Text>
             </Box>
           </Stack>
