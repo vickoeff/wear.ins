@@ -58,8 +58,8 @@ const Products = {
   baseStyle: ({ colorMode }) => ({
     bg: colorMode === 'dark' ? '#fff' : '#111',
     color: colorMode === 'dark' ? '#111' : '#fff',
-    pt: '8rem',
-    pb: '8rem',
+    pt: '4rem',
+    pb: '4rem',
   }),
 };
 
@@ -102,6 +102,10 @@ const theme = extendTheme({
         color: colorMode === 'dark' ? '#fff' : '#111',
       }),
       variants: {
+        'products-title': ({ colorMode }) => ({
+          color: colorMode === 'dark' ? '#111' : '#fff',
+          textAlign: 'center',
+        }),
         'price-tag': ({ colorMode }) => ({
           color: colorMode === 'dark' ? '#111' : '#fff',
         }),

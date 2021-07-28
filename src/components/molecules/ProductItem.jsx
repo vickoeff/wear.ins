@@ -9,14 +9,22 @@ import {
 import DetailProduct from './DetailProduct';
 
 export default function ProductItem(props) {
-  const { tShirt, price, discountedPrice, isDiscount, ...rest } = props;
+  const {
+    name,
+    spesifications,
+    tShirt,
+    price,
+    discountedPrice,
+    isDiscount,
+    ...rest
+  } = props;
   const direction = useBreakpointValue({ base: 'column', md: 'row' });
 
   return (
     <Box {...rest}>
       <Img src={tShirt} alt="t-shirt" />
       <Stack direction={direction}>
-        <DetailProduct flex={1} />
+        <DetailProduct name={name} spesifications={spesifications} flex={1} />
         <Flex flex={1} justifyContent="center" alignItems="center">
           {!isDiscount ? (
             <Heading variant="price-tag">{price}</Heading>

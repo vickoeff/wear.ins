@@ -26,6 +26,9 @@ export default function Footer() {
   const igButton = () => {
     window.open('https://www.instagram.com/wear.ins_ofc/', '_blank');
   };
+  const shopeeButton = () => {
+    window.open('https://shopee.co.id/wearins17?smtt=0.0.9', '_blank');
+  };
 
   return (
     <Box __css={styles}>
@@ -38,11 +41,8 @@ export default function Footer() {
         backgroundColor="#00000061"
         zIndex="1"
       ></Box>
-
-      {/* start blured box footer */}
-      <Card variant="blured-box-footer"></Card>
+      {/* start blured box footer */} <Card variant="blured-box-footer"></Card>
       {/* end blured box footer */}
-
       <Box
         position="relative"
         bg={colorMode === 'dark' ? '#111' : '#fff'}
@@ -106,6 +106,7 @@ export default function Footer() {
                   p={{ base: '0.5rem ', md: '1rem 2rem' }}
                   mr={4}
                   _focus={{ outline: 'none' }}
+                  onClick={shopeeButton}
                 >
                   <Img
                     src={process.env.PUBLIC_URL + '/shopee-logo.png'}
@@ -117,7 +118,9 @@ export default function Footer() {
             </Box>
           </Stack>
           <Stack direction="row" mt={5}>
-            <Text fontSize="sm">© Copyright ⋅ Some right reserved</Text>
+            <Text fontSize="xs">
+              © 2021 Wear.Ins, Inc. Some Rights Reserved
+            </Text>
           </Stack>
         </Container>
       </Box>

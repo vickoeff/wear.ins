@@ -11,6 +11,42 @@ function Home() {
 
   const products = [
     {
+      name: 'Ninja Girl - print.1',
+      spesifications: {
+        material: 'Cotton Combad 30s',
+        color: 'Black, White',
+        size: 'S, M, L, XL, XXL',
+      },
+      tShirt:
+        colorMode === 'dark'
+          ? process.env.PUBLIC_URL + '/images/black-ninja-girl-FB.png'
+          : process.env.PUBLIC_URL + '/images/white-ninja-girl-FB.png',
+      price: 'Rp 100.000,-',
+      discountedPrice: 'Rp 90.000,-',
+      isDiscount: true,
+    },
+    {
+      name: 'Masker Girl - print.2',
+      spesifications: {
+        material: 'Cotton Combad 30s',
+        color: 'Black, White',
+        size: 'S, M, L, XL, XXL',
+      },
+      tShirt:
+        colorMode === 'dark'
+          ? process.env.PUBLIC_URL + '/images/black-masker-girl-FB.png'
+          : process.env.PUBLIC_URL + '/images/white-masker-girl-FB.png',
+      price: 'Rp 100.000,-',
+      discountedPrice: 'Rp 90.000,-',
+      isDiscount: true,
+    },
+    {
+      name: 'Ninja - print.3',
+      spesifications: {
+        material: 'Cotton Combad 30s',
+        color: 'Black, White',
+        size: 'S, M, L, XL, XXL',
+      },
       tShirt:
         colorMode === 'dark'
           ? process.env.PUBLIC_URL + '/images/black-ninja-FB.png'
@@ -18,22 +54,6 @@ function Home() {
       price: 'Rp 100.000,-',
       discountedPrice: 'Rp 90.000,-',
       isDiscount: true,
-    },
-    {
-      tShirt:
-        colorMode === 'dark'
-          ? process.env.PUBLIC_URL + '/images/black-masker-girl-FB.png'
-          : process.env.PUBLIC_URL + '/images/white-masker-girl-FB.png',
-      price: 'Rp 100.000,-',
-      discountedPrice: 'Rp 80.000,-',
-      isDiscount: true,
-    },
-    {
-      tShirt:
-        colorMode === 'dark'
-          ? process.env.PUBLIC_URL + '/images/black-ninja-girl-FB.png'
-          : process.env.PUBLIC_URL + '/images/white-ninja-girl-FB.png',
-      price: 'Rp 100.000,-',
     },
   ];
 

@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 
 export default function DetailProduct(props) {
-  const { tShirt, ...rest } = props;
+  const { name, spesifications, ...rest } = props;
 
   return (
     <Box {...rest}>
@@ -27,21 +27,27 @@ export default function DetailProduct(props) {
         </Thead>
         <Tbody>
           <Tr>
+            <Td>Name/Code</Td>
+            <Td textTransform="capitalize">
+              <strong>{name}</strong>
+            </Td>
+          </Tr>
+          <Tr>
             <Td>Material</Td>
-            <Td>
-              <strong>Cotton Combad 30s</strong>
+            <Td textTransform="capitalize">
+              <strong>{spesifications.material}</strong>
             </Td>
           </Tr>
           <Tr>
             <Td>Color</Td>
-            <Td>
-              <strong>Black, White</strong>
+            <Td textTransform="capitalize">
+              <strong>{spesifications.color}</strong>
             </Td>
           </Tr>
           <Tr>
             <Td>Size</Td>
             <Td>
-              <strong>S, M, L, XL, XXL</strong>
+              <strong>{spesifications.size}</strong>
             </Td>
           </Tr>
         </Tbody>
