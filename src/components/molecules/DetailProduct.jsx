@@ -1,5 +1,6 @@
 import {
   Box,
+  Heading,
   Table,
   Thead,
   Tbody,
@@ -7,7 +8,7 @@ import {
   Tr,
   Td,
   TableCaption,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 export default function DetailProduct(props) {
   const { name, spesifications, ...rest } = props;
@@ -22,7 +23,11 @@ export default function DetailProduct(props) {
         <Thead>
           <Tr>
             <Th fontSize="md">Spesification</Th>
-            <Th></Th>
+            <Th>
+              {spesifications.isNew ? (
+                <Heading variant="new-item">New</Heading>
+              ) : null}
+            </Th>
           </Tr>
         </Thead>
         <Tbody>
