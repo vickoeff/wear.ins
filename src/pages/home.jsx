@@ -15,6 +15,7 @@ function Home() {
       spesifications: {
         material: "Cotton Combad 30s",
         color: "Black, White",
+        artPosition: "Back",
         size: "S, M, L, XL, XXL",
       },
       tShirt:
@@ -30,6 +31,7 @@ function Home() {
       spesifications: {
         material: "Cotton Combad 30s",
         color: "Black, White",
+        artPosition: "Front",
         size: "S, M, L, XL, XXL",
       },
       tShirt:
@@ -45,6 +47,7 @@ function Home() {
       spesifications: {
         material: "Cotton Combad 30s",
         color: "Black, White",
+        artPosition: "Back",
         size: "S, M, L, XL, XXL",
       },
       tShirt:
@@ -60,6 +63,7 @@ function Home() {
       spesifications: {
         material: "Cotton Combad 30s",
         color: "Black, White",
+        artPosition: colorMode === "dark" ? "Back" : "Front",
         size: "S, M, L, XL, XXL",
         isNew: true,
       },
@@ -76,6 +80,7 @@ function Home() {
       spesifications: {
         material: "Cotton Combad 30s",
         color: "Khaki",
+        artPosition: "Front",
         size: "S, M, L, XL, XXL",
         isNew: true,
       },

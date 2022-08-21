@@ -44,6 +44,12 @@ export default function DetailProduct(props) {
             </Td>
           </Tr>
           <Tr>
+            <Td>Art Position</Td>
+            <Td textTransform="capitalize">
+              <strong>{spesifications.artPosition}</strong>
+            </Td>
+          </Tr>
+          <Tr>
             <Td>Color</Td>
             <Td textTransform="capitalize">
               <strong>{spesifications.color}</strong>
