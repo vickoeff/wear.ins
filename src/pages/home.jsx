@@ -61,6 +61,7 @@ function Home() {
         material: "Cotton Combad 30s",
         color: "Black, White",
         size: "S, M, L, XL, XXL",
+        isNew: true,
       },
       tShirt:
         colorMode === "dark"
@@ -76,6 +77,7 @@ function Home() {
         material: "Cotton Combad 30s",
         color: "Khaki",
         size: "S, M, L, XL, XXL",
+        isNew: true,
       },
       tShirt:
         colorMode === "dark"

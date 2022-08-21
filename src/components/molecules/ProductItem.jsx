@@ -5,8 +5,8 @@ import {
   Img,
   Heading,
   useBreakpointValue,
-} from '@chakra-ui/react';
-import DetailProduct from './DetailProduct';
+} from "@chakra-ui/react";
+import DetailProduct from "./DetailProduct";
 
 export default function ProductItem(props) {
   const {
@@ -18,16 +18,20 @@ export default function ProductItem(props) {
     isDiscount,
     ...rest
   } = props;
-  const direction = useBreakpointValue({ base: 'column', md: 'row' });
+  const direction = useBreakpointValue({ base: "column", md: "row" });
 
   return (
     <Box {...rest}>
-      <Img src={tShirt} alt="t-shirt" />
+      <Box pos="relative">
+        <Img src={tShirt} alt="t-shirt" />
+      </Box>
       <Stack direction={direction}>
         <DetailProduct name={name} spesifications={spesifications} flex={1} />
         <Flex flex={1} justifyContent="center" alignItems="center">
           {!isDiscount ? (
-            <Heading variant="price-tag">{price}</Heading>
+            <Stack direction="column">
+              <Heading variant="price-tag">{price}</Heading>
+            </Stack>
           ) : (
             <Stack direction="column">
               <Heading variant="discount-price-tag">{price}</Heading>
