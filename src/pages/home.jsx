@@ -88,7 +88,7 @@ function Home() {
         colorMode === "dark"
           ? process.env.PUBLIC_URL + "/images/sunshine.png"
           : process.env.PUBLIC_URL + "/images/sunshine.png",
-      price: "Rp 110.000,-",
+      price: "Rp 100.000,-",
       discountedPrice: null,
       isDiscount: false,
     },
